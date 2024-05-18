@@ -15,7 +15,7 @@ abstract class FileSystemComponent {
     public abstract void print(String prefix);
 }
 
-// Classe Feuille
+// Classe Feuille (= fichiers)
 class FileLeaf extends FileSystemComponent {
     public FileLeaf(String name) {
         super(name);
@@ -27,7 +27,7 @@ class FileLeaf extends FileSystemComponent {
     }
 }
 
-// Composite
+// Classe Composite (= repertoires)
 class DirectoryComposite extends FileSystemComponent {
     private List<FileSystemComponent> children = new ArrayList<>();
 
@@ -52,7 +52,7 @@ class DirectoryComposite extends FileSystemComponent {
     }
 }
 
-// Client
+// Classe Main
 public class Tree {
     public static void main(String[] args) {
         Path rootPath = Paths.get(System.getProperty("user.home"));
